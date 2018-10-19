@@ -13,5 +13,8 @@ module.exports = merge(webpackConfig, {
   plugins: [
     //activates HMR
     new webpack.HotModuleReplacementPlugin()
-  ]
+  ],
+  stats: {
+    colors: true
+  }
 });
