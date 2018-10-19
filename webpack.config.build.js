@@ -23,7 +23,7 @@ module.exports = merge(webpackConfig, {
     new CopyWebpackPlugin([
       {
         from: "./**/*.{ico}",
-        to: args.git ? "./docs" : "./dist"
+        to: args.git ? "./docs/[name].[ext]" : "./dist/[name].[ext]"
       }
     ])
   ]
