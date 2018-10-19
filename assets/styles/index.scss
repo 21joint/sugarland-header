@@ -122,9 +122,10 @@
         @media (min-width: $screen-md) {
           padding: 0;
         }
-        &:hover, &:focus  {
+        &:hover,
+        &:focus {
           background-color: transparent;
-          opacity: .75;
+          opacity: 0.75;
         }
       }
       > .nav > li:nth-child(1) > a {
@@ -214,7 +215,7 @@
     .fa {
       margin-right: 5px;
     }
-    @media(min-width: $screen-sm) {
+    @media (min-width: $screen-sm) {
       min-width: 135px;
     }
   }
@@ -253,13 +254,29 @@
   font-weight: 600;
   padding: 0 13px;
   min-width: 80px;
+  border: none;
   a {
     color: inherit;
   }
   i {
     color: #88e6fc;
-    padding: 0 4px;
+    padding: 0 6px;
     font-size: 17px;
+  }
+  &.loading {
+    animation: none;
+    border: none;
+    &:before {
+      animation: spin 1s infinite linear;
+      content: "";
+      border-radius: 100px;
+      width: 1.5em;
+      height: 1.5em;
+      border: 0.15em solid rgba(255, 255, 255, 0.7);
+      border-top-color: $blue-dark;
+      -webkit-animation: spin 1s infinite linear;
+      animation: spin 1s infinite linear;
+    }
   }
 }
 .#{$prefix}-header--top {
@@ -323,7 +340,7 @@
       align-items: center;
       justify-content: center;
       padding: 5px;
-      @media(min-width: $screen-md) {
+      @media (min-width: $screen-md) {
         max-width: 75px;
       }
     }

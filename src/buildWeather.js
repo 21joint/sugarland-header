@@ -1,7 +1,7 @@
 import PKG from "../package";
 
 export default function(current, selector) {
-  let elems = document.querySelectorAll(selector);
+  const elems = document.querySelectorAll(selector);
 
   for (let i = 0; i < elems.length; ++i) {
     elems[i].innerHTML = `
