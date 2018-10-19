@@ -1,5 +1,5 @@
-@import "mixins";
 @import "variables";
+@import "mixins";
 @import "fonts";
 @import "icons";
 @import "../../../vohm-header/src/partials/hamburger/hamburger";
@@ -15,28 +15,27 @@
   right: 0;
   z-index: -1;
   width: 100%;
-  background-image: url("https://www.dropbox.com/s/3llmlcn6fozi3f9/Screenshot%202018-10-18%2021.02.46.png?dl=0&raw=1");
+  //background-image: url("https://www.dropbox.com/s/3llmlcn6fozi3f9/Screenshot%202018-10-18%2021.02.46.png?dl=0&raw=1");
+  background-color: #222;
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: 0 0;
   opacity: 0.08;
 }
-
 .bg-white {
   background-color: #fff !important;
 }
-
 .bg-blue {
   background-color: $blue !important;
   color: #ffffff;
 }
-
 .#{$prefix}-header {
   font-family: "TrendaW00", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   a {
     transition: 0.15s all;
+    color: inherit;
   }
   .btn:hover,
   .btn:focus,
@@ -97,13 +96,14 @@
     }
   }
   &--btn {
-    height: 66px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    //font-size: 14px;
     box-shadow: none;
     outline: 0;
+    padding: 14px;
   }
   nav {
     text-transform: capitalize;
@@ -119,9 +119,12 @@
         margin-bottom: 15px;
       }
       > .nav > li > a {
-        padding: 0;
-        &:hover {
+        @media (min-width: $screen-md) {
+          padding: 0;
+        }
+        &:hover, &:focus  {
           background-color: transparent;
+          opacity: .75;
         }
       }
       > .nav > li:nth-child(1) > a {
@@ -151,7 +154,6 @@
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            justify-content: center;
             height: 100%;
             padding: 6px !important;
             &:hover,
@@ -166,7 +168,6 @@
   ul.nav {
     min-width: 290px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     > li {
       border: none;
@@ -187,15 +188,34 @@
     justify-content: center;
     font-size: 11px;
     font-weight: 700;
-    min-width: 56px;
+    height: 100%;
+    width: 56px;
+    span {
+      &:after {
+        content: attr(data-closed-text);
+      }
+    }
+    &[aria-expanded="true"] {
+      span {
+        &:after {
+          content: attr(data-open-text);
+        }
+      }
+    }
   }
   .btn-trip {
     color: #ffffff;
     background-color: #253a80;
     font-weight: 700;
     min-width: 67px;
+    .count {
+      margin-left: 5px;
+    }
     .fa {
       margin-right: 5px;
+    }
+    @media(min-width: $screen-sm) {
+      min-width: 135px;
     }
   }
   .btn-book--online {
@@ -205,13 +225,21 @@
     font-size: 11px;
     color: #ffffff;
     background-color: $yellow;
+    width: 75px;
+    min-width: 59px;
   }
   .btn-search--toggle {
-    background-color: #037690;
+    background-color: $blue;
+    width: 100%;
+    min-width: 46px;
     color: #ffffff;
-    line-height: 37px;
-    padding: 0 14px;
-    font-size: 20px;
+    border: none;
+    i {
+      font-size: 20px;
+    }
+    @media (min-width: $screen-md) {
+      background-color: #037690;
+    }
   }
   .fa {
     font-size: 20px;
@@ -238,12 +266,16 @@
   color: #fff;
   font-size: 11px;
   border-bottom: 2px solid #ffffff;
-  .flex-row {
-    min-height: 37px;
+  > .container-fluid {
+    > .flex-row {
+      height: 68px;
+      @media (min-width: $screen-md) {
+        height: 38px;
+      }
+    }
   }
   li.separator {
     color: #ffffff;
-    margin: 0 5px;
     font-size: 16px;
   }
   nav {
@@ -282,27 +314,34 @@
   .book-online {
     a {
       background-color: $yellow;
-      width: 75px;
-      line-height: 12px;
       text-align: center;
       font-weight: bold;
       font-size: 11px;
       color: inherit;
-      height: 37px;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 5px;
+      @media(min-width: $screen-md) {
+        max-width: 75px;
+      }
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: $screen-md) {
     background-color: $blue;
     border: none;
   }
+  @media (max-width: $screen-md) {
+    .container-fluid > .flex-row {
+      > [class^="flex-col"] + [class^="flex-col"] {
+        border-left: 2px solid #fff;
+      }
+    }
+  }
 }
-
 .navbar-collapse.navbar-collapse--#{$prefix} {
   position: fixed;
-  top: 66px;
+  top: 68px;
   right: 0;
   z-index: 100;
   padding: 0;
@@ -315,7 +354,6 @@
     position: fixed;
   }
 }
-
 .#{$prefix}-nav--social {
   margin: 15px 0;
   font-size: 0;
@@ -333,7 +371,6 @@
     }
   }
 }
-
 .modal.#{$prefix}-modal--search {
   .close {
     position: absolute;
@@ -364,7 +401,7 @@
     flex-direction: column;
     padding: 100px 0;
     background-color: transparent;
-    @media (min-width: 1024px) {
+    @media (min-width: $screen-md) {
       padding: 12% 0 20% 0;
     }
   }
@@ -376,7 +413,7 @@
     position: relative;
     margin-bottom: 50px;
     display: flex;
-    @media (min-width: 1024px) {
+    @media (min-width: $screen-md) {
       height: 86px;
     }
 
@@ -390,7 +427,7 @@
       border: none;
       cursor: pointer;
       margin-right: 3px;
-      @media (min-width: 1024px) {
+      @media (min-width: $screen-md) {
         font-size: 40px;
       }
     }
@@ -443,15 +480,14 @@
     color: #3e3e3e;
     font-size: 22px;
     align-self: center;
-    @media (min-width: 1024px) {
+    @include placeholder {
+      color: #3a3a3a;
+    }
+    @media (min-width: $screen-md) {
       font-size: 45px;
     }
   }
-  @include placeholder() {
-    color: #3a3a3a;
-  }
 }
-
 .#{$prefix}-modal--search.in ~ .modal-backdrop.in {
   background-color: rgba(255, 255, 255, 0.8);
   opacity: 1;

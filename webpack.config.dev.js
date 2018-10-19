@@ -13,11 +13,7 @@ module.exports = merge(webpackConfig, {
   },
   plugins: [
     //activates HMR
-    new webpack.HotModuleReplacementPlugin(),
-    new CopyWebpackPlugin({
-      from: "./**/*.ico",
-      to: args.git ? "./docs" : "./dist"
-    })
+    new webpack.HotModuleReplacementPlugin()
   ],
   stats: {
     colors: true

@@ -302,14 +302,14 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "/fonts");
 //
 //// Small screen / tablet
 ////** Deprecated `$screen-sm` as of v3.0.1
-//$screen-sm:                  768px !default;
+$screen-sm: 640px;
 //$screen-sm-min:              $screen-sm !default;
 ////** Deprecated `$screen-tablet` as of v3.0.1
 //$screen-tablet:              $screen-sm-min !default;
 //
 //// Medium screen / desktop
 ////** Deprecated `$screen-md` as of v3.0.1
-//$screen-md:                  992px !default;
+$screen-md: 1024px;
 //$screen-md-min:              $screen-md !default;
 ////** Deprecated `$screen-desktop` as of v3.0.1
 //$screen-desktop:             $screen-md-min !default;
@@ -334,7 +334,7 @@ $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "/fonts");
 ////** Number of columns in the grid.
 //$grid-columns:              12 !default;
 ////** Padding between columns. Gets divided in half for the left and right.
-//$grid-gutter-width:         30px !default;
+$grid-gutter-width:         30px;
 //// Navbar collapse
 ////** Point at which the navbar becomes uncollapsed.
 //$grid-float-breakpoint:     $screen-sm-min !default;

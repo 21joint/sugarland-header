@@ -4,16 +4,27 @@ const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpackConfig = require("./webpack.config");
 const args = require("yargs").argv;
-const PurifyCSSPlugin = require("purifycss-webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
-const publicPath = args.git ? PKG.name + "/" : "/";
-const dist = args.git ? "docs" : "dist";
+// const PurifyCss = require("purifycss-webpack");
+
+const publicPath = args.git ? "/" + PKG.name + "/" : "/";
+const dist = args.git ? "21joint.github.io/" + PKG.name + "/" : "dist";
 
 module.exports = merge(webpackConfig, {
   output: {
     path: path.join(__dirname, dist),
-    filename: "[name].[chunkhash].js"
+    filename: "[name].[chunkhash].js",
+    publicPath: publicPath
   },
 
-  plugins: [new CleanWebpackPlugin([dist])]
+  plugins: [
+    new CleanWebpackPlugin([dist]),
+    new CopyWebpackPlugin([
+      {
+        from: "./**/*.{ico}",
+        to: args.git ? "./docs" : "./dist"
+      }
+    ])
+  ]
 });

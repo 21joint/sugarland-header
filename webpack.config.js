@@ -66,7 +66,7 @@ module.exports = {
           {
             loader: "url-loader",
             options: {
-              limit: 5120,
+              limit: 1024,
               name(file) {
                 if (file.indexOf("fonts") > -1) {
                   return "fonts/[name].[ext]";
@@ -76,7 +76,7 @@ module.exports = {
               },
               fallback: "file-loader",
               outputPath: "./",
-              publicPath: args.git ? pkg.name : "/"
+              publicPath: "/"
             }
           }
         ]
@@ -85,15 +85,15 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      IS_DEV: IS_DEV,
-      PKG: pkg
+      IS_DEV,
+      pkg
     }),
     new MiniCssExtractPlugin({
       filename: module.hot ? "css/[name].css" : "css/[name].[contenthash].css",
       chunkFilename: "css/[id].css"
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "index.ejs"),
+      template: path.join(__dirname, "/index.ejs"),
       title: pkg.description
     })
   ],

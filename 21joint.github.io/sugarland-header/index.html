@@ -1,11 +1,4 @@
-<%
-const PKG = require('./package');
-const PREFIX = PKG.prefix;
-const LOGO = require('./assets/images/logo.svg');
-const LOGO_SM = require('./assets/images/logo_small.svg');
-const FAVICON = require('file-loader!./src/favicon.ico');
-const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
-%>
+
 
 <!doctype html>
 <html lang="en">
@@ -14,11 +7,11 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--View Title-->
-  <title><%= htmlWebpackPlugin.options.title %></title>
-  <link rel="icon" href="<%= FAVICON %>" type="image/x-icon"/>
+  <title>Visit Sugar Land</title>
+  <link rel="icon" href="/sugarland-header/67d37580f1b7e7a8c6a9a2ad464d104f.ico" type="image/x-icon"/>
 </head>
 <body>
-<% if (IS_DEV) { %>
+
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0="
@@ -33,34 +26,34 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
   <style>body {
       min-height: 2000px;
     }</style>
-<% } %>
-<header class="<%= PREFIX %>-header">
+
+<header class="sltx-header">
   <!--HEADER: SEARCH -->
-  <div class="<%= PREFIX %>-header--search"></div>
+  <div class="sltx-header--search"></div>
   <!--HEADER: FIXED -->
-  <div class="<%= PREFIX %>-header--fixed hidden">
+  <div class="sltx-header--fixed hidden">
     <div class="container-fluid">
       <div class="flex-row align-items-center">
-        <div class="flex-col-auto"><a href="<%= PKG.website %>"><img class="img-fluid <%= PREFIX %>-logo"
-                                                                     src="<%= LOGO_SM %>"
-                                                                     alt="<%= PKG.description %>"/></a></div>
+        <div class="flex-col-auto"><a href="https://www.visitsugarlandtx.com"><img class="img-fluid sltx-logo"
+                                                                     src="/images/logo_small.svg"
+                                                                     alt="Visit Sugar Land"/></a></div>
         <div class="flex-col-auto">
           <!--HEADER FIXED . LINKS -->
-          <div class="<%= PREFIX %>-header--links">
+          <div class="sltx-header--links">
             <ul class="list-unstyled list-inline m-0">
-              <li><a href="<%= PKG.website %>/explore/request-visitor-information/" target="_blank">Free
+              <li><a href="https://www.visitsugarlandtx.com/explore/request-visitor-information/" target="_blank">Free
                   Visitor Guide</a></li>
               <li class="separator">|</li>
-              <li><a href="<%= PKG.website %>/explore/e-blast-sign-up/" target="_blank">E-Blast Sign-Up</a></li>
+              <li><a href="https://www.visitsugarlandtx.com/explore/e-blast-sign-up/" target="_blank">E-Blast Sign-Up</a></li>
             </ul>
           </div>
           <!--HEADER FIXED . NAVIGATION -->
           <nav>
             <ul class="list-inline list-unstyled">
-              <li><a href="<%= PKG.website %>/explore" target="_blank">explore</a></li>
-              <li><a href="<%= PKG.website %>/events" target="_blank">events</a></li>
-              <li><a href="<%= PKG.website %>/restaurants" target="_blank">restaurants</a></li>
-              <li><a href="<%= PKG.website %>/hotels" target="_blank">hotels</a></li>
+              <li><a href="https://www.visitsugarlandtx.com/explore" target="_blank">explore</a></li>
+              <li><a href="https://www.visitsugarlandtx.com/events" target="_blank">events</a></li>
+              <li><a href="https://www.visitsugarlandtx.com/restaurants" target="_blank">restaurants</a></li>
+              <li><a href="https://www.visitsugarlandtx.com/hotels" target="_blank">hotels</a></li>
               <li><a href="https://www.facebook.com/visitsugarland" target="_blank">#SweeterinSL</a></li>
             </ul>
           </nav>
@@ -69,20 +62,20 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
     </div>
   </div>
   <!--HEADER: DESKTOP: TOP -->
-  <div class="<%= PREFIX %>-header--top">
+  <div class="sltx-header--top">
     <div class="container-fluid">
       <div class="flex-row">
         <div class="flex-col-auto hidden-md hidden-lg p-0">
-          <a class="<%= PREFIX %>-header--btn m-0 h-100 p-0"
-             href="<%= PKG.website %>"><img class="<%= PREFIX %>-header--logo"
-                                            src="<%= LOGO_SM %>"
-                                            alt="<%= PKG.description %>"/></a>
+          <a class="sltx-header--btn m-0 h-100 p-0"
+             href="https://www.visitsugarlandtx.com"><img class="sltx-header--logo"
+                                            src="/images/logo_small.svg"
+                                            alt="Visit Sugar Land"/></a>
         </div>
         <div class="flex-col hidden-xs p-0 bg-blue">
           <div class="h-100">
             <div class="flex-row h-100 justify-content-sm-around align-items-center m-0">
               <div class="flex-col-auto">
-                <ul class="list-inline list-unstyled <%= PREFIX %>-nav--social h-100 align-items-center m-0">
+                <ul class="list-inline list-unstyled sltx-nav--social h-100 align-items-center m-0">
                   <li class="p-0">
                     <a href="https://www.facebook.com/pages/Visit-Sugar-Land-TX/1633383806889557"
                        target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
@@ -102,16 +95,16 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
                 </ul>
               </div>
               <div class="flex-col-auto visible-sm">
-                <div class="<%= PREFIX %>-weather"></div>
+                <div class="sltx-weather"></div>
               </div>
               <div class="flex-col-auto hidden-xs hidden-sm p-0">
-                <div class="<%= PREFIX %>-nav--links">
-                  <div class="<%= PREFIX %>-header--links">
+                <div class="sltx-nav--links">
+                  <div class="sltx-header--links">
                     <ul class="list-unstyled list-inline mb-0">
-                      <li><a href="<%= PKG.website %>/explore/request-visitor-information/" target="_blank">Free
+                      <li><a href="https://www.visitsugarlandtx.com/explore/request-visitor-information/" target="_blank">Free
                           Visitor Guide</a></li>
                       <li class="separator">|</li>
-                      <li><a href="<%= PKG.website %>/explore/e-blast-sign-up/" target="_blank">Free Visitor
+                      <li><a href="https://www.visitsugarlandtx.com/explore/e-blast-sign-up/" target="_blank">Free Visitor
                           Guide</a></li>
                     </ul>
                   </div>
@@ -120,20 +113,20 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
               <div class="flex-col-auto hidden-xs hidden-sm">
                 <nav class="nav-secondary">
                   <ul class="nav m-0 list-inline list-unstyled">
-                    <li><a href="<%= PKG.website %>/meetings/"
+                    <li><a href="https://www.visitsugarlandtx.com/meetings/"
                            target="blank"
                            title="Meetings">Meetings</a>
                     </li>
-                    <li><a href="<%= PKG.website %>/sports/"
+                    <li><a href="https://www.visitsugarlandtx.com/sports/"
                            target="blank"
                            title="Sports">Sports</a>
                     </li>
-                    <li><a href="<%= PKG.website %>/event-producers/"
+                    <li><a href="https://www.visitsugarlandtx.com/event-producers/"
                            target="blank"
                            title="Event Producers">Event
                         Producers</a>
                     </li>
-                    <li><a href="<%= PKG.website %>/media/"
+                    <li><a href="https://www.visitsugarlandtx.com/media/"
                            target="blank"
                            title="Media">Media</a>
                     </li>
@@ -143,8 +136,8 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
             </div>
           </div>
         </div>
-        <div class="flex-col flex-col-sm-auto p-0"><a class="<%= PREFIX %>-header--btn btn-trip p-0"
-                                                      href="<%= PKG.website %>/tripbuilder/"><i class="fa fa-suitcase"
+        <div class="flex-col flex-col-sm-auto p-0"><a class="sltx-header--btn btn-trip p-0"
+                                                      href="https://www.visitsugarlandtx.com/tripbuilder/"><i class="fa fa-suitcase"
                                                                                                 aria-hidden="true"></i><span class="hidden-xs hidden-sm">MY TRIP</span><span
               class="count">( 0 )</span></a></div>
         <!--BOOK ONLINE-->
@@ -155,37 +148,37 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
         </div>
         <!--WEATHER-->
         <div class="flex-col-auto h-100 hidden-xs hidden-sm p-0">
-          <div class="flex-row no-gutters align-items-center justify-content-evenly <%= PREFIX %>-weather h-100"></div>
+          <div class="flex-row no-gutters align-items-center justify-content-evenly sltx-weather h-100"></div>
         </div>
         <div class="flex-col flex-col-sm-auto p-0">
-          <div class="<%= PREFIX %>-search h-100">
+          <div class="sltx-search h-100">
             <!-- Button trigger modal -->
             <button type="button"
                     class="btn-search--toggle h-100"
                     data-toggle="modal"
-                    data-target="#<%= PREFIX %>SearchModal">
+                    data-target="#sltxSearchModal">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
           </div>
         </div>
         <div class="flex-col-auto hidden-md hidden-lg p-0">
           <button type="button"
-                  aria-controls="<%= PREFIX %>NavBar"
-                  class="<%= PREFIX %>-header--btn btn-nav--toggle p-0"
+                  aria-controls="sltxNavBar"
+                  class="sltx-header--btn btn-nav--toggle p-0"
                   data-toggle="collapse"
-                  data-target="#<%= PREFIX %>NavBar"
+                  data-target="#sltxNavBar"
                   aria-expanded="false"><i class="icon-hamburger"></i> <span class="bold" data-closed-text="MENU" data-open-text="CLOSE"></span></button>
-          <div id="<%= PREFIX %>NavBar"
-               class="collapse navbar-collapse navbar-collapse--<%= PREFIX %>"
+          <div id="sltxNavBar"
+               class="collapse navbar-collapse navbar-collapse--sltx"
                aria-expanded="false">
 
             <div class="bg-white">
               <nav class="nav-primary">
                 <ul class="nav m-0 list-unstyled flex-column">
-                  <li><a href="<%= PKG.website %>/explore" target="_blank">explore</a></li>
-                  <li><a href="<%= PKG.website %>/events" target="_blank">events</a></li>
-                  <li><a href="<%= PKG.website %>/restaurants" target="_blank">restaurants</a></li>
-                  <li><a href="<%= PKG.website %>/hotels" target="_blank">hotels</a></li>
+                  <li><a href="https://www.visitsugarlandtx.com/explore" target="_blank">explore</a></li>
+                  <li><a href="https://www.visitsugarlandtx.com/events" target="_blank">events</a></li>
+                  <li><a href="https://www.visitsugarlandtx.com/restaurants" target="_blank">restaurants</a></li>
+                  <li><a href="https://www.visitsugarlandtx.com/hotels" target="_blank">hotels</a></li>
                   <li><a href="https://www.facebook.com/visitsugarland" target="_blank">#SweeterinSL</a></li>
                 </ul>
               </nav>
@@ -193,26 +186,26 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
             <div class="bg-blue">
               <nav class="nav-secondary">
                 <ul class="nav flex-column m-0 list-unstyled">
-                  <li><a href="<%= PKG.website %>/meetings/"
+                  <li><a href="https://www.visitsugarlandtx.com/meetings/"
                          target="blank"
                          title="Meetings">Meetings</a>
                   </li>
-                  <li><a href="<%= PKG.website %>/sports/"
+                  <li><a href="https://www.visitsugarlandtx.com/sports/"
                          target="blank"
                          title="Sports">Sports</a>
                   </li>
-                  <li><a href="<%= PKG.website %>/event-producers/"
+                  <li><a href="https://www.visitsugarlandtx.com/event-producers/"
                          target="blank"
                          title="Event Producers">Event
                       Producers</a>
                   </li>
-                  <li><a href="<%= PKG.website %>/media/"
+                  <li><a href="https://www.visitsugarlandtx.com/media/"
                          target="blank"
                          title="Media">Media</a>
                   </li>
                 </ul>
               </nav>
-              <div class="<%= PREFIX %>-nav--social">
+              <div class="sltx-nav--social">
                 <div class="flex-row justify-content-between align-items-center">
                   <div class="flex-col-auto">
                     <ul class="list-inline list-unstyled mb-0">
@@ -244,17 +237,17 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
                   </div>
                   <div class="flex-col-auto">
                     Weather widget will be here
-                    <div id="<%= PREFIX %>-weather"></div>
+                    <div id="sltx-weather"></div>
                   </div>
                 </div>
               </div>
-              <div class="<%= PREFIX %>-nav--links">
-                <div class="<%= PREFIX %>-header--links">
+              <div class="sltx-nav--links">
+                <div class="sltx-header--links">
                   <ul class="list-unstyled list-inline mb-0">
-                    <li><a href="<%= PKG.website %>/explore/request-visitor-information/" target="_blank">Free
+                    <li><a href="https://www.visitsugarlandtx.com/explore/request-visitor-information/" target="_blank">Free
                         Visitor Guide</a></li>
                     <li class="separator">|</li>
-                    <li><a href="<%= PKG.website %>/explore/e-blast-sign-up/" target="_blank">Free Visitor
+                    <li><a href="https://www.visitsugarlandtx.com/explore/e-blast-sign-up/" target="_blank">Free Visitor
                         Guide</a></li>
                   </ul>
                 </div>
@@ -266,28 +259,28 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
     </div>
   </div>
   <!--HEADER: DESKTOP: BOT -->
-  <div class="<%= PREFIX %>-header--bot hidden-xs hidden-sm bg-white">
+  <div class="sltx-header--bot hidden-xs hidden-sm bg-white">
     <div class="container-fluid">
       <div class="flex-row align-items-center">
-        <div class="flex-col-md-4"><a href="<%= PKG.website %>"><img src="<%= LOGO %>"
-                                                                     alt="<%= PKG.description %>"
-                                                                     class="img-fluid <%= PREFIX %>-logo"/></a></div>
+        <div class="flex-col-md-4"><a href="https://www.visitsugarlandtx.com"><img src="/images/logo.svg"
+                                                                     alt="Visit Sugar Land"
+                                                                     class="img-fluid sltx-logo"/></a></div>
         <div class="flex-col-md-8">
           <nav class="nav-primary">
             <ul class="nav list-inline list-unstyled m-0">
-              <li><a href="<%= PKG.website %>/explore"
+              <li><a href="https://www.visitsugarlandtx.com/explore"
                      target="_blank">
                   <img class="nav-icon"
-                       src="<%= TELESCOPE_SVG %>" alt="Explore"><span>explore</span></a></li>
-              <li><a href="<%= PKG.website %>/events"
+                       src="/images/sltx-icon-telescope.svg" alt="Explore"><span>explore</span></a></li>
+              <li><a href="https://www.visitsugarlandtx.com/events"
                      target="_blank"><i class="nav-icon icon-confetti"></i><span>events</span></a></li>
-              <li><a href="<%= PKG.website %>/restaurants"
+              <li><a href="https://www.visitsugarlandtx.com/restaurants"
                      target="_blank"><i class="nav-icon icon-restaurant"></i><span>restaurants</span></a></li>
-              <li><a href="<%= PKG.website %>/hotels"
+              <li><a href="https://www.visitsugarlandtx.com/hotels"
                      target="_blank"><i class="nav-icon icon-bed"></i><span>hotels</span></a></li>
               <li><a href="https://www.facebook.com/visitsugarland"
                      target="_blank"><img class="nav-icon"
-                                          src="<%= LOGO_SM %>"><span>#SweeterinSL</span></a></li>
+                                          src="/images/logo_small.svg"><span>#SweeterinSL</span></a></li>
             </ul>
           </nav>
         </div>
@@ -298,6 +291,6 @@ const TELESCOPE_SVG = require('./assets/images/sltx-icon-telescope.svg')
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
 
-<%= require('html-loader?interpolate=true!./src/search_modal.html') %>
-</body>
+ <div style=font-family:TrendaW00,sans-serif class="modal sltx-modal--search" id="sltxSearchModal" tabindex=-1 role=dialog aria-labelledby=Search> <div class=modal-dialog role=document> <div class=modal-content> <div class=modal-header> <button type=button class=close data-dismiss=modal aria-label=Close><i class="fa fa-times" aria-hidden=true></i></button> </div> <div class=modal-body> <div class="flex-row justify-content-center"> <div class=flex-col-lg-8> <form data-sv-searchform="" action=/search/ method=GET> <input class=form-control name=q type=text class=searchInput autocomplete=off autocorrect=off autocapitalize=off placeholder="Search this site..." value=""> <button type=button data-sv-searchbtn="" class="fa fa-search fa-inverse searchBtn"></button> </form> </div> <div class=w-100></div> <div class=flex-col-lg-8> <ul class="flex-row list-unstyled no-gutters"> <li class="flex-col-6 flex-col-sm"> <div class=search-imagebox> <a href="https://www.visitsugarlandtx.com/explore/recreation/" target=""> <img src=https://assets.simpleviewcms.com/simpleview/image/upload/c_fill,h_475,q_75,w_475/v1/clients/sugarland/skate_park_d0cd6b4b-f025-4779-baed-4e0e76ee4321.jpg alt="Skateboarding at the City Park"> <div class=title> Recreation &amp; Sports </div> </a> </div> </li> <li class="flex-col-6 flex-col-sm"> <div class=search-imagebox> <a href="https://www.visitsugarlandtx.com/restaurants/" target=""> <img src=https://assets.simpleviewcms.com/simpleview/image/upload/c_fill,h_475,q_75,w_475/v1/clients/sugarland/Perry_s_Steakhouse_Bone_In_Filet_Mignon_4f183227-acf5-4ab2-834b-5f8a405cbfc9.jpg alt="Bone-In Filet Mignon from Perry's Steakhouse &amp; Grille"> <div class=title> Restaurants </div> </a> </div> </li> <li class="flex-col-6 flex-col-sm"><div class=search-imagebox> <a href="https://www.visitsugarlandtx.com/hotels/" target=""> <img src=https://assets.simpleviewcms.com/simpleview/image/upload/c_fill,h_475,q_75,w_475/v1/clients/sugarland/Hyatt_Place_Sugar_Land_4ac487ce-c3a4-44d3-8151-635d25c3b19e.png alt="Hyatt Place Lobby"> <div class=title> Hotels </div> </a> </div></li> <li class="flex-col-6 flex-col-sm"> <div class=search-imagebox> <a href="https://www.visitsugarlandtx.com/events/" target=""> <img src=https://assets.simpleviewcms.com/simpleview/image/upload/c_fill,h_475,q_75,w_475/v1/clients/sugarland/Corvette_Show_93ea2a86-3f1a-4149-ab3d-689d14453dc6.jpg alt="Visitors checking out the Corvette show at the Plaza"> <div class=title> Events </div> </a> </div> </li> </ul> </div> </div> </div> </div> </div> </div> 
+<script type="text/javascript" src="/sugarland-header/main.3b7033f331c99cebf6aa.js"></script></body>
 </html>
