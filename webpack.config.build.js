@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 // const PurifyCss = require("purifycss-webpack");
 
 const publicPath = args.git ? "/" + PKG.name + "/" : "/";
-const dist = args.git ? "21joint.github.io/" + PKG.name + "/" : "dist";
+const dist = args.git ? "./docs" : "./dist";
 
 module.exports = merge(webpackConfig, {
   output: {
