@@ -12,8 +12,7 @@ const dist = args.git ? "docs" : "dist";
 module.exports = merge(webpackConfig, {
   output: {
     path: path.join(__dirname, dist),
-    filename: "[name].[chunkhash].js",
-    publicPath: publicPath
+    filename: "[name].[chunkhash].js"
   },
 
   plugins: [new CleanWebpackPlugin([dist])]
