@@ -61,7 +61,7 @@ module.exports = {
 
       // FONTS/IMAGES
       {
-        test: /\.(woff|woff2|ttf|eot|otf|svg|gif|png|jpe?g|ico)$/i,
+        test: /\.(woff|woff2|ttf|eot|otf|svg|gif|png|jpe?g)$/i,
         use: [
           {
             loader: "url-loader",
