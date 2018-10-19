@@ -1,0 +1,37 @@
+/*
+	This file will be included in header in every page after foundation.
+	It should be used for content that relates
+	to your site as a whole, it should not be used for
+	plugin-specific css
+*/
+
+.footer_container, 
+.industry-nav-holder,
+.main-wrapper,
+.vguide-enews-wrapper,
+.footer-row,
+.sticky-nav,
+a[href]:after,
+.inner-list-cont img,
+.mobile-options,
+.shared-items-container .shared-items .container .image-container img,
+.qv-btn,
+.listings-bottom,
+.image-grid .imagebox-collection .slides img,
+.image-grid .imagebox-collection,
+.fh-item img,
+.sh-imgcont img,
+.sh-description-container .triangle,
+.imagebox,
+.blog-wrapper,
+.sh-description-container,
+.offers-slider,
+.slick-prev,
+.slick-arrow,
+.contact-item img,
+.addthis,
+.sticky-nav .flex-holder,
+.header-section,
+.actions,
+.image-container .featured
+{ display:none; }

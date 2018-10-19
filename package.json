@@ -1,0 +1,98 @@
+{
+  "name": "webpack-boilerplate",
+  "prefix": "sltx",
+  "version": "0.0.1",
+  "description": "Visit Sugar Land",
+  "author": "Christoph von Gellhorn",
+  "license": "MIT",
+  "website": "https://www.visitsugarlandtx.com",
+  "homepage": "https://21joint.github.com/sugarland-header",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --watch --mode development --config webpack.config.dev.js",
+    "build": "webpack -p --progress --mode production --config webpack.config.build.js",
+    "build:git": "webpack -p --progress --mode production --config webpack.config.build.js --git",
+    "git-push": "npm run build:git && git add . && git pull && git commit -m'updates' && git push",
+    "scrape": "node scrape-it.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:21joint/sugarland-header.git"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.6",
+    "ansi-html": "0.0.7",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "extract-css-chunks-webpack-plugin": "^3.2.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "popper.js": "^1.14.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/plugin-transform-template-literals": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@fortawesome/fontawesome-free": "^5.4.1",
+    "autoprefixer": "^9.2.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "5.2.0",
+    "css-hot-loader": "^1.4.2",
+    "css-loader": "^1.0.0",
+    "ejs": "^2.6.1",
+    "ejs-loader": "^0.3.1",
+    "eslint": "^5.7.0",
+    "eslint-config-babel": "^8.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standart": "^0.2.0",
+    "eslint-config-webpack": "^1.2.5",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-flowtype": "^3.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.4",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^1.14.3",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "4.1.4",
+    "website-scraper": "^3.3.7",
+    "yargs": "^12.0.2"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "babel",
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "no-var": 0,
+      "max-len": 0,
+      "prettier/prettier": "error"
+    },
+    "env": {
+      "node": true,
+      "mocha": true
+    }
+  },
+  "location": {
+    "lat": "29.619678",
+    "lng": "-95.634949"
+  }
+}

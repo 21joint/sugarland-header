@@ -1,0 +1,62 @@
+.tripbuilder .expiredWarning { display: none; margin-bottom: 10px; margin-top: 10px; }
+
+/* begin: google maps */
+.tripbuilder .gMapContainer .showGMap .isOpen { display:none; }
+.tripbuilder .gMapContainer .showGMap .isClosed { display:block; }
+
+.tripbuilder .gMapContainer.open  .showGMap .isOpen { display:block; }
+.tripbuilder .gMapContainer.open  .showGMap .isClosed { display:none; }
+
+.tripbuilder .gMapContainer .gMapHolder { height:300px;display:none; }
+.tripbuilder .gMapContainer.open .gMapHolder { display:block; }
+
+.tripbuilder .gMapContainer .showGMap { margin-bottom:10px;background:#999;text-transform:uppercase;color:#fff;letter-spacing:1px;cursor:pointer;font-size:10px;font-weight:bold;text-align:center; }
+.tripbuilder .gMapContainer .showGMap > div { padding:5px 0; }
+
+.tripbuilder .gMapContainer .gMapHolder img { max-width:none; } /* foundation overwrite for info window close button */
+/* end: google maps */
+.tripbuilder span.map-text {
+	font-family: 'Trenda W00 Regular';
+}
+a.getDirectionsBtn.small.button {
+	color: #fff;
+	font-family: 'Trenda W00 Bold';
+	font-weight: 100;
+	font-size: 14px;
+	background: #F1AA1D;
+	display: block;
+	text-align: center;
+}
+form#tb-directionsForm span {
+	font-family: 'Trenda W00 Bold';
+}
+.tripbuilder.core-styles .itemBottom h6.sv-listing-heading a {
+	font-size: 19px!important;
+	line-height: 26px!important;
+	color: #3e3e3e!important;
+	margin: 0 0 2px 0px;
+	letter-spacing: 0;
+	text-align: left;
+	font-family: 'Trenda W00 Bold'!important;
+}
+.tripbuilder .content-cont {
+	box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+	padding: 5px 12px;
+}
+.tripbuilder ul.no-bullet.itemInfo {
+	margin: 0;
+}
+.tripbuilder li.one-line-two-items {
+	font-family: 'Trenda W00 Regular';
+	font-size: 14px;
+	line-height: 21px;
+	margin-bottom: 0;
+	color: #58585b;
+	font-weight: 600;
+}
+@media only screen and (max-width: 64em) {
+	.mobile-trip span.mobile-count {
+		display: none;
+	}
+}

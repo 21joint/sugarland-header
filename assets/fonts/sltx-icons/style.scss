@@ -1,0 +1,46 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?sx1fwl') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?sx1fwl') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?sx1fwl##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bed {
+  &:before {
+    content: $icon-bed;     
+    color: #b27f50;
+  }
+}
+.icon-confetti {
+  &:before {
+    content: $icon-confetti;     
+    color: #42a976;
+  }
+}
+.icon-restaurant {
+  &:before {
+    content: $icon-restaurant;     
+    color: #078db2;
+  }
+}
+

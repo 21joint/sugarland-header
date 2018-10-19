@@ -1,0 +1,53 @@
+/*Cookie CSS*/
+.cookie-notification-wrapper {
+	display: block;
+	z-index: 1001;
+	max-width: 640px;
+	width: 100%;
+	background: #FFF;
+	padding: 14px 30px 12px 17px;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	border: 1px solid rgba(0,0,0,0.06);
+	box-shadow: 3px 0px 40px rgba(0,0,0,.16);
+}
+.cookie-notification-wrapper .close-wrapper {
+	text-align: right;
+}
+.cookie-notification-wrapper .close {
+	display: inline-block;
+	font-family: 'Trenda W00 Bold';
+	font-size: 14px;
+	margin: auto;
+	color: #fff!important;
+	background-color: #d42561;
+	text-transform: uppercase;
+	padding: 15px;
+	cursor: pointer;
+}
+.cookie-notification-wrapper .close:hover {
+}
+.cookie-notification-wrapper p {
+  font-size: 17px;
+  line-height: 28px;
+}
+.cookie-notification-wrapper {
+	position: fixed;
+}
+@media screen and (max-width: 640px) {
+	.cookie-notification-wrapper {
+		position: relative;
+	}
+	.cookie-ad-container {
+		position: fixed;
+		z-index: 1000;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.panel_custom_footer .mobileAd {
+		position: relative;
+	}
+}
