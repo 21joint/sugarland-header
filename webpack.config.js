@@ -1,7 +1,7 @@
 const pkg = require("./package");
 const path = require("path");
 const args = require("yargs").argv;
-const IS_DEV = process.env.NODE_ENV !== "production";
+const IS_DEV = (process.env.NODE_ENV !== "production");
 const dirNode = path.resolve(__dirname, "node_modules");
 const dirApp = path.resolve(__dirname, "src");
 const dirAssets = path.resolve(__dirname, "assets");
