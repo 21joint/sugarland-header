@@ -10,7 +10,18 @@ import("../package").then(PKG => {
     lng: Number(PKG.location.lng)
   };
 
+  const weatherWidgets = document.querySelectorAll(
+    "." + PKG.prefix + "-weather"
+  );
+
+  for (let j = 0; j < weatherWidgets.length; ++j) {
+    weatherWidgets[j].classList.add("loading");
+  }
+
   getWeather(params).then(function(res) {
+    for (let j = 0; j < weatherWidgets.length; ++j) {
+      weatherWidgets[j].classList.remove("loading");
+    }
     console.log(res);
   });
 });
