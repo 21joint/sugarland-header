@@ -17,6 +17,8 @@ const Autoprefixer = require("autoprefixer")({
  * Webpack Configuration
  */
 module.exports = {
+  mode: "development",
+  target: "web",
   entry: ["./src/index.js", "./client.js"],
   output: {
     filename: "[name].bundle.js",
@@ -96,6 +98,5 @@ module.exports = {
       template: path.join(__dirname, "/index.ejs"),
       title: pkg.description
     })
-  ],
-  devtool: "inline-source-map"
+  ]
 };
