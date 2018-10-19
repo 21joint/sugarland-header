@@ -1,7 +1,8 @@
 const merge = require("webpack-merge");
 const webpackConfig = require("./webpack.config");
 const webpack = require("webpack");
-
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const args = require("yargs").argv;
 module.exports = merge(webpackConfig, {
   devServer: {
     contentBase: require("path").resolve(__dirname, "/dist"),
@@ -12,7 +13,11 @@ module.exports = merge(webpackConfig, {
   },
   plugins: [
     //activates HMR
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin({
+      from: "./**/*.ico",
+      to: args.git ? "./docs" : "./dist"
+    })
   ],
   stats: {
     colors: true
